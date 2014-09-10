@@ -1,0 +1,5 @@
+lxqt-powermanagement (0.7.96-1) unstable; urgency=low
+
+  * Initial release (Closes: #747611)
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 10 Sep 2014 19:46:25 +0200
