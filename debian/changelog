@@ -1,3 +1,9 @@
+lxqt-powermanagement (0.7.96-2) unstable; urgency=low
+
+  * Rebuild only; no source changes.
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 22 Sep 2014 22:18:51 +0200
+
 lxqt-powermanagement (0.7.96-1) unstable; urgency=low
 
   * Initial release (Closes: #747611)

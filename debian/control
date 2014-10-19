@@ -45,4 +45,4 @@ Depends:
 Description: Power management module for LXQt (debug symbols) 
  The Power management module for LXQt
  .
- This package contain the debugging symbols.
+ This package contain debugging symbols.
