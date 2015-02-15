@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
-
 #export DH_VERBOSE=1
-export USE_QT5=1
 
 
 %:
@@ -9,7 +7,7 @@ export USE_QT5=1
 
 
 override_dh_auto_install:
-	dh_auto_install -- DESTDIR=$(CURDIR)/debian/lxqt-powermanagement-qt5
+	dh_auto_install -- DESTDIR=$(CURDIR)/debian/lxqt-powermanagement
 
 override_dh_strip:
-	dh_strip --dbg-package=lxqt-powermanagement-qt5-dbg
+	dh_strip --dbg-package=lxqt-powermanagement-dbg
