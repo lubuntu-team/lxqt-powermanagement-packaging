@@ -3,11 +3,8 @@
 
 
 %:
-	dh ${@} --buildsystem cmake --parallel
+	dh ${@} --buildsystem cmake --parallel  --dbg-package=lxqt-powermanagement-dbg
 
 
 override_dh_auto_install:
 	dh_auto_install -- DESTDIR=$(CURDIR)/debian/lxqt-powermanagement
-
-override_dh_strip:
-	dh_strip --dbg-package=lxqt-powermanagement-dbg
