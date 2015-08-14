@@ -53,20 +53,3 @@ Description: Power management module for LXQt (debug symbols)
  .
  This package contain debugging symbols.
 
-# ---- to be removed in 2016 ----
-
-Package: lxqt-powermanagement-qt5
-Depends: lxqt-powermanagement, ${misc:Depends}
-Priority: extra
-Section: oldlibs
-Architecture: all
-Description: lxqt-powermanagement transitional package
- Empty package to facilitate upgrades, can be safely removed.
-
-Package: lxqt-powermanagement-qt5-dbg
-Depends: lxqt-powermanagement-dbg, ${misc:Depends}
-Priority: extra
-Section: oldlibs
-Architecture: all
-Description: lxqt-powermanagement transitional package (dbg)
- Empty package to facilitate upgrades, can be safely removed.
