@@ -36,7 +36,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends},
 Description: Power management module for LXQt
- The Power management module for LXQt
+ The Power management module for LXQt.
  .
  This package contain power management module for LXQt.
 
@@ -50,6 +50,6 @@ Depends:
  ${misc:Depends},
  lxqt-powermanagement (= ${binary:Version}),
 Description: Power management module for LXQt (debug symbols)
- The Power management module for LXQt
+ The Power management module for LXQt.
  .
  This package contain debugging symbols.
