@@ -21,7 +21,7 @@ Build-Depends:
  libqt5xdg-dev (>= 1.2.0),
  pkg-config,
  qtbase5-private-dev (>= 5.3),
- qttools5-dev (>= 5.3), 
+ qttools5-dev (>= 5.3),
  qttools5-dev-tools (>= 5.3),
 Standards-Version: 3.9.6
 Homepage: https://github.com/lxde/lxqt-powermanagement
@@ -49,8 +49,7 @@ Replaces: lxqt-powermanagement-qt5-dbg (<< 0.9.0)
 Depends:
  ${misc:Depends},
  lxqt-powermanagement (= ${binary:Version}),
-Description: Power management module for LXQt (debug symbols) 
+Description: Power management module for LXQt (debug symbols)
  The Power management module for LXQt
  .
  This package contain debugging symbols.
-
