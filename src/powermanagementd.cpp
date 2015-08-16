@@ -26,6 +26,7 @@
 #include <QDebug>
 #include <QStringList>
 
+#include "batteryhelper.h"
 #include "powermanagementd.h"
 #include "../config/powermanagementsettings.h"
 #include "idlenesswatcher.h"
@@ -48,7 +49,6 @@ PowerManagementd::PowerManagementd() :
         performRunCheck();
         mSettings.setRunCheckLevel(CURRENT_RUNCHECK_LEVEL);
     }
-
 }
 
 PowerManagementd::~PowerManagementd()
@@ -58,9 +58,7 @@ PowerManagementd::~PowerManagementd()
 void PowerManagementd::settingsChanged()
 {
     if (mSettings.isBatteryWatcherEnabled() && !mBatterywatcherd)
-    {
         mBatterywatcherd = new BatteryWatcher(this);
-    }
     else if (mBatterywatcherd && ! mSettings.isBatteryWatcherEnabled())
     {
         mBatterywatcherd->deleteLater();
@@ -98,9 +96,14 @@ void PowerManagementd::runConfigure()
 void PowerManagementd::performRunCheck()
 {
     mSettings.setLidWatcherEnabled(Lid().haveLid());
-    mSettings.setBatteryWatcherEnabled(! Battery::batteries().isEmpty());
-    qDebug() << "performRunCheck, lidWatcherEnabled:" << mSettings.isLidWatcherEnabled() << ", batteryWatcherEnabled:" << mSettings.isBatteryWatcherEnabled();
+    bool hasBattery = false;
+    foreach (Solid::Device device, Solid::Device::listFromType(Solid::DeviceInterface::Battery, QString()))
+        if (device.as<Solid::Battery>()->type() == Solid::Battery::PrimaryBattery)
+            hasBattery = true;
+    mSettings.setBatteryWatcherEnabled(hasBattery);
+    mSettings.setIdlenessWatcherEnabled(true);
     mSettings.sync();
+
     mNotification.setSummary(tr("Power Management"));
     mNotification.setBody(tr("You are running LXQt Power Management for the first time.\nYou can configure it from settings... "));
     mNotification.setActions(QStringList() << tr("Configure..."));

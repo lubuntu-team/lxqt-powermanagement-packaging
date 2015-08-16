@@ -26,38 +26,58 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <QDebug>
-#include <QProcess>
 #include <QApplication>
+#include <QProcess>
 #include <QMessageBox>
+#include <QToolTip>
+#include <QHelpEvent>
+#include <Solid/Battery>
+#include <Solid/Device>
+#include <XdgIcon>
+
 #include "trayicon.h"
+#include "batteryhelper.h"
 #include "../config/powermanagementsettings.h"
 
-TrayIcon::TrayIcon(Battery *battery, QObject *parent) : QSystemTrayIcon(parent), mIconProducer(battery), mContextMenu()
+TrayIcon::TrayIcon(Solid::Battery *battery, QObject *parent)
+    : QSystemTrayIcon(parent),
+    mBattery(battery),
+    mIconProducer(battery),
+    mContextMenu()
 {
-    connect(battery, SIGNAL(summaryChanged(QString)), this, SLOT(updateTooltip(QString)));
-    updateTooltip(battery->summary);
+    connect(mBattery, &Solid::Battery::chargePercentChanged, this, &TrayIcon::updateTooltip);
+    connect(mBattery, &Solid::Battery::chargeStateChanged, this, &TrayIcon::updateTooltip);
+    updateTooltip();
 
     connect(&mIconProducer, SIGNAL(iconChanged()), this, SLOT(iconChanged()));
     iconChanged();
 
-    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
+    connect(this, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
+            SLOT(onActivated(QSystemTrayIcon::ActivationReason)));
 
-    mContextMenu.addAction(tr("Configure"), this, SLOT(onConfigureTriggered()));
-    mContextMenu.addAction(tr("About"), this, SLOT(onAboutTriggered()));
-    mContextMenu.addAction(tr("Disable icon"), this, SLOT(onDisableIconTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("configure")), tr("Configure"),
+                           this, SLOT(onConfigureTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("help-about")), tr("About"),
+                           this, SLOT(onAboutTriggered()));
+    mContextMenu.addAction(XdgIcon::fromTheme(QStringLiteral("edit-delete")), tr("Disable icon"),
+                           this, SLOT(onDisableIconTriggered()));
     setContextMenu(&mContextMenu);
 }
 
-TrayIcon::~TrayIcon() {}
+TrayIcon::~TrayIcon()
+{
+}
 
 void TrayIcon::iconChanged()
 {
     setIcon(mIconProducer.mIcon);
 }
 
-void TrayIcon::updateTooltip(QString newTooltip)
+void TrayIcon::updateTooltip()
 {
-    setToolTip(newTooltip);
+    QString tooltip = BatteryHelper::stateToString(mBattery->chargeState());
+    tooltip += QString(" (%1 %)").arg(mBattery->chargePercent());
+    setToolTip(tooltip);
 }
 
 void TrayIcon::onConfigureTriggered()
@@ -70,8 +90,8 @@ void TrayIcon::onAboutTriggered()
     QMessageBox::about(0,
                        tr("About"),
                        tr( "<p>"
-                           "  <b>LXQt Powermanagement</b><br/>"
-                           "  - Powermanagement for the LXQt Desktop Environment"
+                           "  <b>LXQt Power Management</b><br/>"
+                           "  - Power Management for the LXQt Desktop Environment"
                            "</p>"
                            "<p>"
                            "  Authors:<br/>"

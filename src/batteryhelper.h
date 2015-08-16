@@ -2,7 +2,9 @@
  * (c)LGPL2+
  *
  * LXDE-Qt - a lightweight, Qt based, desktop toolset
+ * http://razor-qt.org
  *
+ * Copyright: 2011 Razor team
  * Authors:
  *   Christian Surlykke <christian@surlykke.dk>
  *
@@ -22,32 +24,21 @@
  * Boston, MA 02110-1301 USA
  *
  * END_COMMON_COPYRIGHT_HEADER */
+#ifndef BATTERYHELPER_H
+#define BATTERYHELPER_H
 
-#include <QDebug>
-#include "../config/powermanagementsettings.h"
-#include "watcher.h"
+#include <QVariantMap>
+#include <QDateTime>
+#include <Solid/Battery>
+#include <Solid/Device>
 
-Watcher::Watcher(QObject *parent) :
-    QObject(parent),
-    mScreenSaver(this)
+class BatteryHelper : public QObject
 {
-    connect(&mScreenSaver, SIGNAL(done()), &mLoop, SLOT(quit()));
-}
+    Q_OBJECT
 
-Watcher::~Watcher()
-{
-}
-
-void Watcher::doAction(int action)
-{
-    // if (action == -1) { }
-    if (action == -2)
-    {
-        mScreenSaver.lockScreen();
-        mLoop.exec();
-    }
-    else if (action >= 0)
-        mPower.doAction((LxQt::Power::Action) action);
-
-    emit done();
-}
+public:
+    static QString stateToString(Solid::Battery::ChargeState state);
+    static QString technologyToString(Solid::Battery::Technology tech);
+    static QString typeToString(Solid::Battery::BatteryType type);
+};
+#endif

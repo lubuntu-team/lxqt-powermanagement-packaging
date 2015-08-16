@@ -2,24 +2,9 @@ project(lxqt-powermanagement)
 
 set(QTX_LIBRARIES Qt5::Widgets Qt5::DBus Qt5::Svg Qt5::X11Extras)
 
-set(lxqt-powermanagement_MOCS
-    watcher.h
-    battery.h
-    batterywatcher.h
-    batteryinfoframe.h
-    batteryinfodialog.h
-    idlenesswatcher.h
-    lid.h
-    lidwatcher.h
-    powermanagementd.h
-    trayicon.h
-    iconproducer.h
-    ../config/powermanagementsettings.h
-)
-
-set(lxqt-powermanagement_SRCS
+set(SOURCES
     watcher.cpp
-    battery.cpp
+    batteryhelper.cpp
     batteryinfoframe.cpp
     batteryinfodialog.cpp
     batterywatcher.cpp
@@ -34,7 +19,7 @@ set(lxqt-powermanagement_SRCS
     ../config/powermanagementsettings.cpp
 )
 
-set(lxqt-powermanagement_UIS
+set(UI_FILES
     batteryinfoframe.ui
     batteryinfodialog.ui
 )
@@ -43,8 +28,7 @@ set(DESKTOP_FILES_IN
     lxqt-powermanagement.desktop.in
 )
 
-qt5_wrap_ui( UIS ${lxqt-powermanagement_UIS})
-qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
+qt5_add_dbus_adaptor(SOURCES
     org.freedesktop.ScreenSaver.xml
     idlenesswatcher.h
     IdlenessWatcher
@@ -53,9 +37,8 @@ qt5_add_dbus_adaptor(lxqt-powermanagement_SRCS
 lxqt_translate_ts(QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
-        ${lxqt-powermanagement_SRCS}
-        ${lxqt-powermanagement_UIS}
-        ${lxqt-powermanagement_MOCS}
+        ${SOURCES}
+        ${UI_FILES}
     INSTALL_DIR
         ${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}
 )
@@ -103,18 +86,15 @@ find_library(XCB_DPMS_LIBRARY NAMES xcb-dpms
 
 
 include_directories(
-    "${CMAKE_CURRENT_BINARY_DIR}"
     ${Qt5Gui_PRIVATE_INCLUDE_DIRS}
     ${XCB_INCLUDE_DIR}
     ${X11_XCB_INCLUDE_DIR}
-    ${QTXDG_INCLUDE_DIRS}
     ${XCB_SCREENSAVER_INCLUDE_DIR}
     ${XCB_DPMS_INCLUDE_DIR}
 )
 
 add_executable(lxqt-powermanagement
-    ${lxqt-powermanagement_SRCS}
-    ${UIS}
+    ${SOURCES}
     ${RSCS}
     ${QM_FILES}
     ${lxqt-powermanagement_QM_LOADER}
@@ -122,14 +102,22 @@ add_executable(lxqt-powermanagement
 )
 
 target_link_libraries(lxqt-powermanagement
-    ${LXQT_LIBRARIES}
-    ${QTXDG_LIBRARY}
+    lxqt
     ${QTX_LIBRARIES}
     ${XCB_LIBRARY}
     ${XCB_SCREENSAVER_LIBRARY}
     ${XCB_DPMS_LIBRARY}
     ${X11_XCB_LIBRARY}
+    KF5::Solid
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(FILES ${DESKTOP_FILES} DESTINATION share/applications)
+install(TARGETS
+    ${PROJECT_NAME}
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    COMPONENT Runtime
+)
+install(FILES
+    ${DESKTOP_FILES}
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    COMPONENT Runtime
+)
