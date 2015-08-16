@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 
 project(lxqt-powermanagement)
 
@@ -7,6 +7,7 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5DBus REQUIRED)
@@ -14,12 +15,10 @@ find_package(Qt5X11Extras REQUIRED)
 find_package(Qt5Svg REQUIRED)
 find_package(Qt5LinguistTools REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
-find_package(Qt5Xdg REQUIRED)
-message(STATUS "Building with Qt${Qt5Core_VERSION_STRING}")
+find_package(KF5Solid REQUIRED)
 
-include(${LXQT_USE_FILE})
-include(${QTXDG_USE_FILE})
-
+include(GNUInstallDirs)
+include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
 add_subdirectory(config)

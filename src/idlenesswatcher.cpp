@@ -80,6 +80,7 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
 
     connect(&mTimer, SIGNAL(timeout()), SLOT(idleTimeout()));
     connect(&mPSettings, SIGNAL(settingsChanged()), SLOT(restartTimer()));
+    connect(this, SIGNAL(done()), this, SLOT(restartTimer()));
     connect(&mDBusWatcher, SIGNAL(serviceUnregistered(QString)), SLOT(serviceUnregistered(QString)));
     connect(&mLockProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(screenUnlocked(int,QProcess::ExitStatus)));
     connect(&mErrorNotification, SIGNAL(actionActivated(int)), SLOT(notificationAction(int)));
@@ -142,22 +143,19 @@ uint IdlenessWatcher::getIdleTimeMs()
 
 uint IdlenessWatcher::getMaxIdleTimeoutMs()
 {
-    return 1000*mPSettings.getIdlenessTimeSecs();
+    return 1000 * mPSettings.getIdlenessTimeSecs();
 }
 
 void IdlenessWatcher::idleTimeout()
 {
     uint msSinceUserInput = getIdleTimeMs();
-    qDebug() << "    ms since user input:" << msSinceUserInput;
     if (msSinceUserInput >= getMaxIdleTimeoutMs())
     {
-        doAction(mPSettings.getIdlenessAction());        
+        mTimer.stop();
+        doAction(mPSettings.getIdlenessAction());
     }
     else
-    {
-        qDebug() << "--- Locking screen in" << (getMaxIdleTimeoutMs() - msSinceUserInput) << "(maybe).";
         mTimer.start(getMaxIdleTimeoutMs() - msSinceUserInput);
-    }
 }
 
 void IdlenessWatcher::restartTimer()
