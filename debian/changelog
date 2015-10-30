@@ -1,8 +1,9 @@
-lxqt-powermanagement (0.9.0+20151024-1) experimental; urgency=medium
+lxqt-powermanagement (0.9.0+20151029-1) experimental; urgency=medium
 
-  * Cherry-picking upstream version 0.9.0+20151024.
+  * Cherry-picking upstream version 0.9.0+20151029.
+  * Set minimum version for libqtxdg and liblxqt
 
- -- Alf Gaida <agaida@siduction.org>  Sat, 24 Oct 2015 12:16:06 +0200
+ -- Alf Gaida <agaida@siduction.org>  Fri, 30 Oct 2015 23:50:16 +0100
 
 lxqt-powermanagement (0.9.0+20150914-1) experimental; urgency=medium
 
