@@ -1,3 +1,14 @@
+lxqt-powermanagement (0.9.0+20150807-2) unstable; urgency=medium
+
+  * Fixed czchen's email address
+  * Removed breaks/replaces
+  * Fixed control with cme fix
+  * Added linker flags -Wl,--as-needed
+  * Removed not needed minimum versions
+  * Cleaned up .gitignore
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 12 Nov 2015 02:26:31 +0100
+
 lxqt-powermanagement (0.9.0+20150807-1) unstable; urgency=medium
 
   [ Alf Gaida ]
