@@ -1,3 +1,11 @@
+lxqt-powermanagement (0.10.0-2) experimental; urgency=medium
+
+  * Merge from experimental.
+  * New upstream release.
+  * Set minimum version for liblxqt and libqtxdg.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Thu, 19 Nov 2015 21:55:09 +0800
+
 lxqt-powermanagement (0.9.0+20150807-2) unstable; urgency=medium
 
   * Fixed czchen's email address
