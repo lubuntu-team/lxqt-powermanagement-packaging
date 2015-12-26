@@ -34,14 +34,3 @@ Description: power management module for LXQt
  The Power management module for LXQt.
  .
  This package contain power management module for LXQt.
-
-Package: lxqt-powermanagement-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: ${misc:Depends},
-         lxqt-powermanagement (= ${binary:Version})
-Description: power management module for LXQt (debug symbols)
- The Power management module for LXQt.
- .
- This package contain debugging symbols.
