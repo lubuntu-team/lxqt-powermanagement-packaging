@@ -1,13 +1,13 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: lxqt-powermanagement
 Source: https://github.com/lxde/lxqt-openssh-askpass
 
 Files: *
-Copyright: 2013-2015 LXQt team
+Copyright: 2013-2016 LXQt team
 License: LGPL-2.1+
 
 Files: debian/*
-Copyright: 2014-2015 Alf Gaida <agaida@siduction.org>
+Copyright: 2014-2016 Alf Gaida <agaida@siduction.org>
            2015      Andrew Lee (李健秋) <ajqlee@debian.org>
 License: LGPL-2.1+
 

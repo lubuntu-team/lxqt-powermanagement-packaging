@@ -1,3 +1,15 @@
+lxqt-powermanagement (0.10.0-4) unstable; urgency=medium
+
+  * Added Recommends: upower (Closes: #828697)
+    Thanks to Martin Küttler <martin.kuettler@os.inf.tu-dresden.de>
+  * Bump Standards to 3.9.8, no changes needed
+  * Bump years in copyright
+  * Changed VCS-fields to use https
+  * Fixed copyright Format field
+  * Add hardening=+all to debian/rules
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 09 Jul 2016 11:05:07 +0200
+
 lxqt-powermanagement (0.10.0-3) unstable; urgency=medium
 
   * Remove dbg package in favor of dbgsym.
