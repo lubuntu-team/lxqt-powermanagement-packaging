@@ -1,5 +1,6 @@
-lxqt-powermanagement (0.10.0-5) experimental; urgency=medium
+lxqt-powermanagement (0.10.96~11-g2bf985c-1) experimental; urgency=medium
 
+  * Cherry-picking upstream version 0.10.96~11-g2bf985c.
   * Preparing the upcoming release, switch to experimental
   * Added new build dependendies:
     - gcc (>= 4:6)
@@ -12,7 +13,7 @@ lxqt-powermanagement (0.10.0-5) experimental; urgency=medium
   * Set CMAKE_BUILD_TYPE=RelWithDebInfo
   * Exported LC_ALL=C.UTF-8, make builds reproducible
 
- -- Alf Gaida <agaida@siduction.org>  Mon, 18 Jul 2016 23:58:20 +0200
+ -- Alf Gaida <agaida@siduction.org>  Tue, 19 Jul 2016 00:02:00 +0200
 
 lxqt-powermanagement (0.10.0-4) unstable; urgency=medium
 
