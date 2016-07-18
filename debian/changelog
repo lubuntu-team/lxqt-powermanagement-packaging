@@ -1,3 +1,19 @@
+lxqt-powermanagement (0.10.0-5) experimental; urgency=medium
+
+  * Preparing the upcoming release, switch to experimental
+  * Added new build dependendies:
+    - gcc (>= 4:6)
+    - g++ (>= 4:6)
+    - libqt5xdgiconloader-dev (>= 1.3.1~)
+  * Minimum versions added
+  * Added Recommends lxqt-powermanagement-l10n
+  * Exported LC_ALL=C.UTF-8
+  * Added translation control to rules
+  * Set CMAKE_BUILD_TYPE=RelWithDebInfo
+  * Exported LC_ALL=C.UTF-8, make builds reproducible
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 18 Jul 2016 23:58:20 +0200
+
 lxqt-powermanagement (0.10.0-4) unstable; urgency=medium
 
   * Added Recommends: upower (Closes: #828697)
