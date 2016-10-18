@@ -1,3 +1,25 @@
+lxqt-powermanagement (0.11.0-2) unstable; urgency=medium
+
+  * Cherry-picking upstream release 0.11.0
+  * Synced debian foo with experimental
+  * Bumped compat to 10  
+  * Removed --parallel from rules, standard in compat 10
+  * Bumped minimum version debhelper to />= 10)
+  * Bumped minimum version liblxqt0-dev (>= 0.11.0)
+  * Bumped minimum version libqt5xdg-dev (>= 2.0.0)
+  * Added build dependency libkf5idletime-dev
+  * Added build dependency libqt5svg5-dev
+  * Added Recommends lxqt-powermanagement-l10n
+  * Added build dependency libqt5xdgiconloader-dev (>= 2.0.0)
+  * Removed build dependency libx11-xcb-dev
+  * Removed build dependency libxcb-dpms0-dev
+  * Removed build dependency libxcb-screensaver0-dev
+  * Added translation control to rules
+  * Set CMAKE_BUILD_TYPE=RelWithDebInfo
+  * Exported LC_ALL=C.UTF-8, make builds reproducible
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 18 Oct 2016 17:25:42 +0200
+
 lxqt-powermanagement (0.10.0-4) unstable; urgency=medium
 
   * Added Recommends: upower (Closes: #828697)
