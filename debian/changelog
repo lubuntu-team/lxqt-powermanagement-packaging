@@ -1,3 +1,13 @@
+lxqt-powermanagement (0.11.1-2) unstable; urgency=medium
+
+  * Bumped standards to 4.0.0 - no changes needed
+  * Depends on lxqt-policykit
+  * Make upower a dependency instead of recommend it
+  * Recommend lxqt-qtplugin and lxqt-session
+    (Closes: #866256)
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 02 Jul 2017 02:19:42 +0200
+
 lxqt-powermanagement (0.11.1-1) unstable; urgency=medium
 
   * Cherry-picking upstream release 0.11.1.
