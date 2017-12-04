@@ -1,3 +1,9 @@
+lxqt-powermanagement (0.12.0-3) unstable; urgency=medium
+
+  * Transition to unstable 
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 05 Dec 2017 00:06:38 +0100
+
 lxqt-powermanagement (0.12.0-2) experimental; urgency=medium
 
   * Added missed breaks and replaces for lxqt-common << 0.12.0
