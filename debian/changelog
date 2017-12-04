@@ -1,3 +1,19 @@
+lxqt-powermanagement (0.12.0-2) experimental; urgency=medium
+
+  * Added missed breaks and replaces for lxqt-common << 0.12.0
+    (Closes: #879911) - Thanks Andreas Beckmann <anbe@debian.org> 
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 27 Oct 2017 22:10:31 +0200
+
+lxqt-powermanagement (0.12.0-1) experimental; urgency=medium
+
+  * Cherry-picking upstream release 0.12.0.
+  * Switched to experimental
+  * Bumped liblxqt0-dev to >= 0.12.0
+  * Bumped Standards to 4.1.1 - no changes needed
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 24 Oct 2017 19:14:29 +0200
+
 lxqt-powermanagement (0.11.1-2) unstable; urgency=medium
 
   * Bumped standards to 4.0.0 - no changes needed
