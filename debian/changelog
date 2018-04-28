@@ -1,21 +1,33 @@
+lxqt-powermanagement (0.12.0-5) unstable; urgency=medium
+
+  * Bumped compat to 11
+  * Bumped debhelper to >= 11~
+  * Bumped Standards to 4.1.4, no changes needed
+  * Changed VCS fields for salsa
+  * Changed Homepage, Source and watch to lxqt
+  * Bumped years in copyright
+  * Removed trailing whitespaces in changelog
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Apr 2018 15:54:07 +0200
+
 lxqt-powermanagement (0.12.0-4) unstable; urgency=medium
 
   * Bumped Standards to 4.1.2, no changes needed
   * Removed debian/gbp.conf
-  * Removed branch from VCS fields 
+  * Removed branch from VCS fields
 
  -- Alf Gaida <agaida@siduction.org>  Thu, 14 Dec 2017 22:01:39 +0100
 
 lxqt-powermanagement (0.12.0-3) unstable; urgency=medium
 
-  * Transition to unstable 
+  * Transition to unstable
 
  -- Alf Gaida <agaida@siduction.org>  Tue, 05 Dec 2017 00:06:38 +0100
 
 lxqt-powermanagement (0.12.0-2) experimental; urgency=medium
 
   * Added missed breaks and replaces for lxqt-common << 0.12.0
-    (Closes: #879911) - Thanks Andreas Beckmann <anbe@debian.org> 
+    (Closes: #879911) - Thanks Andreas Beckmann <anbe@debian.org>
 
  -- Alf Gaida <agaida@siduction.org>  Fri, 27 Oct 2017 22:10:31 +0200
 
@@ -57,7 +69,7 @@ lxqt-powermanagement (0.11.0-2) unstable; urgency=medium
 
   * Cherry-picking upstream release 0.11.0
   * Synced debian foo with experimental
-  * Bumped compat to 10  
+  * Bumped compat to 10
   * Removed --parallel from rules, standard in compat 10
   * Bumped minimum version debhelper to />= 10)
   * Bumped minimum version liblxqt0-dev (>= 0.11.0)
