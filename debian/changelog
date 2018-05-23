@@ -1,6 +1,7 @@
 lxqt-powermanagement (0.13.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update Vcs-* and Maintainer to Lubuntu values.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 22 May 2018 21:43:54 -0500
 
