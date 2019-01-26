@@ -1,3 +1,9 @@
+lxqt-powermanagement (0.14.0-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 26 Jan 2019 00:34:46 -0600
+
 lxqt-powermanagement (0.13.0-0ubuntu1) cosmic; urgency=medium
 
   * New upstream release.
