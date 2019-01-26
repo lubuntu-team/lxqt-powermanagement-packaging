@@ -1,0 +1,5 @@
+etc/xdg/autostart/lxqt-powermanagement.desktop
+usr/share/applications/lxqt-config-powermanagement.desktop
+usr/share/icons/hicolor/scalable/devices/laptop-lid.svg
+usr/bin/lxqt-config-powermanagement
+usr/bin/lxqt-powermanagement

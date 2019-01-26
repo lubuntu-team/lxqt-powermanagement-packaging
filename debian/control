@@ -37,3 +37,14 @@ Description: power management module for LXQt
  The Power management module for LXQt.
  .
  This package contain power management module for LXQt.
+
+Package: lxqt-powermanagement-l10n
+Architecture: all
+Multi-Arch: foreign
+Section: localization
+Depends: ${misc:Depends},
+         qttranslations5-l10n
+Breaks: lxqt-powermanagement (<< 0.11.0)
+Replaces: lxqt-powermanagement (<< 0.11.0)
+Description: Language package for lxqt-powermanagement
+ This package contains the l10n files needed by lxqt-powermangement.
