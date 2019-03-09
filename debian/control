@@ -24,13 +24,8 @@ Homepage: https://github.com/lxqt/lxqt-powermanagement
 
 Package: lxqt-powermanagement
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         lxqt-policykit,
-         upower
-Recommends: lxqt-powermanagement-l10n,
-            lxqt-qtplugin,
-            lxqt-session
+Depends: lxqt-policykit, upower, ${misc:Depends}, ${shlibs:Depends}
+Recommends: lxqt-powermanagement-l10n, lxqt-qtplugin, lxqt-session
 Breaks: lxqt-common (<< 0.12.0)
 Replaces: lxqt-common (<< 0.12.0)
 Description: power management module for LXQt
@@ -42,8 +37,7 @@ Package: lxqt-powermanagement-l10n
 Architecture: all
 Multi-Arch: foreign
 Section: localization
-Depends: ${misc:Depends},
-         qttranslations5-l10n
+Depends: qttranslations5-l10n, ${misc:Depends}
 Breaks: lxqt-powermanagement (<< 0.11.0)
 Replaces: lxqt-powermanagement (<< 0.11.0)
 Description: Language package for lxqt-powermanagement
