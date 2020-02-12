@@ -6,11 +6,11 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
            Andrew Lee (李健秋) <ajqlee@debian.org>
 Section: x11
 Priority: optional
-Build-Depends: debhelper (>= 12),
+Build-Depends: debhelper-compat (= 12),
                libkf5idletime-dev,
                libkf5solid-dev,
                libkf5windowsystem-dev,
-               liblxqt0-dev (>= 0.14.0),
+               liblxqt0-dev (>= 0.14.1~),
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libx11-dev,
