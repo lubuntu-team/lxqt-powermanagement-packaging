@@ -1,11 +1,11 @@
-lxqt-powermanagement (0.15.0-0ubuntu1) UNRELEASED; urgency=medium
+lxqt-powermanagement (0.15.0-0ubuntu1) groovy; urgency=medium
 
   * New upstream release.
     - Update upstream signing key.
     - Update LXQt build dependencies.
   * Bump Standards-version to 4.5.0, no changes needed.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 30 Apr 2020 23:24:48 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 04 Jun 2020 14:34:24 -0500
 
 lxqt-powermanagement (0.14.1-1ubuntu2) focal; urgency=medium
 
