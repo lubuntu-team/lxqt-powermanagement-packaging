@@ -1,8 +1,22 @@
-lxqt-powermanagement (0.15.0-0ubuntu2) UNRELEASED; urgency=medium
+lxqt-powermanagement (0.16.0-1ubuntu1) hirsute; urgency=medium
 
-  * Build-depend on liblxqt-globalkeys0-dev.
+  * New upstream version. Merge from debian unstable.
+  * Bump debhelper-compat requirement to 13.
+  * Update dependencies.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 19 Jun 2020 15:42:52 -0500
+ -- Raman Sarda <theloudspeaker@disroot.org>  Mon, 22 Feb 2021 02:55:40 +0530
+
+lxqt-powermanagement (0.16.0-1) unstable; urgency=medium
+
+  [ Alf Gaida ]
+  * Switched to gbp
+  * Bumped Standards-Version to 4.4.0, no changes needed
+
+  [ Andrew Lee (李健秋) ]
+  * New upstream release.
+  * debian/control: update build-deps.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 06 Jan 2021 17:58:35 +0800
 
 lxqt-powermanagement (0.15.0-0ubuntu1) groovy; urgency=medium
 
