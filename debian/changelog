@@ -1,3 +1,17 @@
+lxqt-powermanagement (0.17.1-0ubuntu1) impish; urgency=medium
+
+  * New upstream release 0.17.1
+  * Update debian/control
+    - Bump Standards-Version to 4.5.1
+    - Use liblxqt0-dev 0.17.0
+    - Use libglobalkeys0-dev 0.17.0
+    - Use libglobalkeys-ui0-dev 0.17.0
+    - Extend lxqt-powermanagement-l10n package description
+  * Rename tag for lintian override
+  * Update debian/copyright
+
+ -- apt-ghetto <apt-ghetto@protonmail.com>  Fri, 13 Aug 2021 15:31:53 +0200
+
 lxqt-powermanagement (0.16.0-1ubuntu1) hirsute; urgency=medium
 
   * New upstream version. Merge from debian unstable.

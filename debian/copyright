@@ -3,12 +3,30 @@ Upstream-Name: lxqt-powermanagement
 Source: https://github.com/lxqt/lxqt-powermanagement
 
 Files: *
-Copyright: 2013-2019 LXQt team
+Copyright: 2013-2020, LXQt team
+           2011-2012, Razor team
+License: LGPL-2.1+
+
+Files: config/helpers.h
+       src/batteryinfodialog.cpp
+       src/batteryinfodialog.h
+       src/iconproducer.cpp
+       src/iconproducer.h
+       src/powermanagementd.h
+       src/watcher.h
+Copyright: 2014-2015, Christian Surlykke <christian@surlykke.dk>
+           2014-2015, Paulo Lieuthier
+License: LGPL-2.1+
+
+Files: src/idlenesswatcher.cpp
+       src/idlenesswatcher.h
+Copyright: 2013, Alec Moskvin <alecm@gmx.com>
 License: LGPL-2.1+
 
 Files: debian/*
-Copyright: 2014-2019 Alf Gaida <agaida@siduction.org>
-           2015      Andrew Lee (李健秋) <ajqlee@debian.org>
+Copyright: 2021,      Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+           2014-2019, Alf Gaida <agaida@siduction.org>
+           2015,      Andrew Lee (李健秋) <ajqlee@debian.org>
 License: LGPL-2.1+
 
 License: LGPL-2.1+
