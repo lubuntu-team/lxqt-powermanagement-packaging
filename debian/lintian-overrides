@@ -4,3 +4,6 @@ lxqt-powermanagement: no-manual-page usr/bin/lxqt-powermanagement
 
 # category LXQt in not yet in freedesktop specs - no bug
 lxqt-powermanagement: desktop-entry-invalid-category LXQt usr/share/applications/lxqt-config-powermanagement.desktop
+
+# don't care about the missing keywords entry
+lxqt-powermanagement: desktop-entry-lacks-keywords-entry usr/share/applications/lxqt-config-powermanagement.desktop
