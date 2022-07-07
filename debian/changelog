@@ -9,6 +9,7 @@ lxqt-powermanagement (1.1.0-0ubuntu1~ppa1) jammy; urgency=medium
   * Removed obsolete "-Wl,--as-needed" linker flag.
   * Added "Rules-Requires-Root: no" to debian/control to silence Lintian's
     silent-on-rules-requiring-root.
+  * Removed trailing whitespace from changelog.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Wed, 06 Jul 2022 23:27:06 -0500
 
@@ -286,4 +287,3 @@ lxqt-powermanagement (0.9.0+20150807-1) unstable; urgency=medium
   * Merging upstream version 0.9.0+20150807.
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 16 Aug 2015 19:19:12 +0800
-
