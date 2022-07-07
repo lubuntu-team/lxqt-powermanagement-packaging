@@ -10,6 +10,7 @@ lxqt-powermanagement (1.1.0-0ubuntu1~ppa1) jammy; urgency=medium
   * Added "Rules-Requires-Root: no" to debian/control to silence Lintian's
     silent-on-rules-requiring-root.
   * Removed trailing whitespace from changelog.
+  * Ran wrap-and-sort.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Wed, 06 Jul 2022 23:27:06 -0500
 
