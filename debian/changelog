@@ -5,6 +5,7 @@ lxqt-powermanagement (1.1.0-0ubuntu1~ppa1) jammy; urgency=medium
   * Removed redundant "Repository-Browser" field from d/upstream/metadata.
   * Overrode Lintian message about the missing (and needless) keywords entry
     in a desktop file.
+  * Bumped Standards-Version to 4.6.1, no changes necessary.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Wed, 06 Jul 2022 23:27:06 -0500
 
