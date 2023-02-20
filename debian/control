@@ -23,6 +23,7 @@ Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-powermanagement-packaging.git
 XS-Debian-Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-powermanagement
 XS-Debian-Vcs-Git: https://salsa.debian.org/lxqt-team/lxqt-powermanagement.git
 Homepage: https://github.com/lxqt/lxqt-powermanagement
+Rules-Requires-Root: no
 
 Package: lxqt-powermanagement
 Architecture: any

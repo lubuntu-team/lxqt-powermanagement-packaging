@@ -2,6 +2,7 @@ lxqt-powermanagement (1.2.0-1ubuntu1) lunar; urgency=medium
 
   * Revert a sync from Debian.
   * Bumped Standards-Version to 4.6.2, no changes necessary.
+  * Added 'Rules-Requires-Root: no' to debian/control.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Sun, 19 Feb 2023 23:43:57 -0600
 
