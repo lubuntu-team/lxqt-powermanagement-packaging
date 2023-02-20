@@ -8,6 +8,7 @@ lxqt-powermanagement (1.2.0-1ubuntu1) lunar; urgency=medium
   * Updated copyright file.
   * Changed 'Repository-Browser' to 'Repository-Browse' in the upstream
     metadata.
+  * Removed trailing whitespace from changelog.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Sun, 19 Feb 2023 23:43:57 -0600
 
@@ -296,4 +297,3 @@ lxqt-powermanagement (0.9.0+20150807-1) unstable; urgency=medium
   * Merging upstream version 0.9.0+20150807.
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 16 Aug 2015 19:19:12 +0800
-
