@@ -1,44 +1,42 @@
-lxqt-powermanagement (1.2.0-0ubuntu1) lunar; urgency=medium
+lxqt-powermanagement (1.2.0-1) unstable; urgency=medium
 
   * New upstream release.
-  * Fix the watch file, for real this time.
-  * Bump build dependencies in debian/control.
-  * Bump Standards-version to 4.6.1, no changes needed.
-  * Lubuntuify the package slightly, to make debhelper happy.
-  * Add some missing brackets in the Lintian overrides.
+  * Bump Standards-Version to 4.6.1.
+  * Bump compat to 13.
+    * Remove unnecessary -Wl,--as-needed in d/rules.
+    * Remove unnecessary --fail-missing in d/rules.
+    * Add Rules-Requires-Root: no.
+  * Update d/watch for GitHub.
+  * Fix d/lintian-overrides.
+  * Fix d/upstream/metadata.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 18 Nov 2022 21:55:31 -0600
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 17 Dec 2022 01:32:56 +0800
 
-lxqt-powermanagement (1.1.0-0ubuntu1) kinetic; urgency=medium
+lxqt-powermanagement (1.1.0-3) unstable; urgency=medium
 
-  * New upstream release.
-  * Bumped build dependencies.
-  * Drop old Breaks/Replaces since we're past the LTS. Update the
-    runtime dependencies too.
+  * Merge to unstable.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 02 Jun 2022 12:43:41 -0500
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sun, 20 Nov 2022 19:19:07 +0800
 
-lxqt-powermanagement (0.17.1-0ubuntu1) impish; urgency=medium
+lxqt-powermanagement (1.1.0-2) experimental; urgency=medium
 
-  * New upstream release 0.17.1
-  * Update debian/control
-    - Bump Standards-Version to 4.5.1
-    - Use liblxqt0-dev 0.17.0
-    - Use libglobalkeys0-dev 0.17.0
-    - Use libglobalkeys-ui0-dev 0.17.0
-    - Extend lxqt-powermanagement-l10n package description
-  * Rename tag for lintian override
-  * Update debian/copyright
+  * Merge to unstable.
 
- -- apt-ghetto <apt-ghetto@protonmail.com>  Fri, 13 Aug 2021 15:31:53 +0200
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sun, 20 Nov 2022 18:34:30 +0800
 
-lxqt-powermanagement (0.16.0-1ubuntu1) hirsute; urgency=medium
+lxqt-powermanagement (1.1.0-1) experimental; urgency=medium
 
-  * New upstream version. Merge from debian unstable.
-  * Bump debhelper-compat requirement to 13.
-  * Update dependencies.
+  * Add debian/salsa-ci.yml file.
+  * Update debian/upstream/signing-key.asc.
+  * New upstream version 1.0.0
+  * New upstream version 1.1.0
+  * Build-deps on liblxqt1-dev (>= 1.1.0~).
+  * Build-deps on liblxqt-globalkeys1-dev (>= 1.1.0~).
+  * Build-deps on liblxqt-globalkeys-ui1-dev (>= 1.1.0~).
+  * Drop obsleted Breaks and Replaces lines.
+  * debian/copyright: update years.
 
- -- Raman Sarda <theloudspeaker@disroot.org>  Mon, 22 Feb 2021 02:55:40 +0530
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Fri, 15 Jul 2022 23:15:01 +0800
 
 lxqt-powermanagement (0.16.0-1) unstable; urgency=medium
 
@@ -52,44 +50,12 @@ lxqt-powermanagement (0.16.0-1) unstable; urgency=medium
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 06 Jan 2021 17:58:35 +0800
 
-lxqt-powermanagement (0.15.0-0ubuntu1) groovy; urgency=medium
-
-  * New upstream release.
-    - Update upstream signing key.
-    - Update LXQt build dependencies.
-  * Bump Standards-version to 4.5.0, no changes needed.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 04 Jun 2020 14:34:24 -0500
-
-lxqt-powermanagement (0.14.1-1ubuntu2) focal; urgency=medium
-
-  * Updated rules to be consistent with debian unstable.
-
- -- Raman Sarda <theloudspeaker@lubuntu.me>  Sun, 16 Feb 2020 00:11:05 +0530
-
-lxqt-powermanagement (0.14.1-1ubuntu1) focal; urgency=low
-
-  * Merge from Debian unstable.  Remaining changes:
-    - Using debhelper-compat
-    - Keeping ubuntu-side tweaks of writing depends in one line.
-    - Updated build deps according to new minimum requirements.
-    - Added upstream metadata
-
- -- Raman Sarda <theloudspeaker@lubuntu.me>  Wed, 12 Feb 2020 11:13:49 +0530
-
 lxqt-powermanagement (0.14.1-1) unstable; urgency=medium
 
   * Cherry-picking new upstream version 0.14.1.
   * Bumped minimum version liblxqt0-dev (>= 0.14.1~)
 
  -- Alf Gaida <agaida@siduction.org>  Tue, 26 Feb 2019 02:47:54 +0100
-
-lxqt-powermanagement (0.14.1-0ubuntu1) disco; urgency=medium
-
-  * New upstream release.
-  * Run wrap-and-sort.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 09 Mar 2019 13:15:31 -0600
 
 lxqt-powermanagement (0.14.0-1) unstable; urgency=medium
 
@@ -104,30 +70,12 @@ lxqt-powermanagement (0.14.0-1) unstable; urgency=medium
 
  -- Alf Gaida <agaida@siduction.org>  Sun, 27 Jan 2019 18:03:45 +0100
 
-lxqt-powermanagement (0.14.0-0ubuntu1) disco; urgency=medium
-
-  * New upstream release.
-    - Bump build dependencies.
-  * Bump Standards-version to 4.3.0, no changes needed.
-  * Bump debhelper compat to 12, no changes needed.
-  * Add a lxqt-powermanagement-l10n package.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 26 Jan 2019 00:39:28 -0600
-
 lxqt-powermanagement (0.13.0-1) unstable; urgency=medium
 
   * Cherry-picking new upstream version 0.13.0.
   * Bumped build dependency liblxqt0-dev to >= 0.13.0~
 
  -- Alf Gaida <agaida@siduction.org>  Thu, 24 May 2018 22:46:32 +0200
-
-lxqt-powermanagement (0.13.0-0ubuntu1) cosmic; urgency=medium
-
-  * New upstream release.
-  * Update Vcs-* and Maintainer to Lubuntu values.
-  * Update build dependencies.
-
- -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 22 May 2018 23:47:42 -0500
 
 lxqt-powermanagement (0.12.0-5) unstable; urgency=medium
 
@@ -283,4 +231,3 @@ lxqt-powermanagement (0.9.0+20150807-1) unstable; urgency=medium
   * Merging upstream version 0.9.0+20150807.
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 16 Aug 2015 19:19:12 +0800
-
