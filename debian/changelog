@@ -6,6 +6,8 @@ lxqt-powermanagement (1.2.0-1ubuntu1) lunar; urgency=medium
   * Removed obsolete '-Wl,--as-needed' linker flag.
   * Removed obsolete override_dh_missing section from debian/rules.
   * Updated copyright file.
+  * Changed 'Repository-Browser' to 'Repository-Browse' in the upstream
+    metadata.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Sun, 19 Feb 2023 23:43:57 -0600
 
