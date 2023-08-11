@@ -5,6 +5,7 @@ lxqt-powermanagement (1.3.0-0ubuntu1) UNRELEASED; urgency=medium
   * Remove redundant hardening rule.
   * Bump Standards-Version to 4.6.2, no changes needed.
   * I guess we don't require root to build, do we?
+  * Update copyright years.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 11 Aug 2023 11:33:08 -0500
 
@@ -293,4 +294,3 @@ lxqt-powermanagement (0.9.0+20150807-1) unstable; urgency=medium
   * Merging upstream version 0.9.0+20150807.
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 16 Aug 2015 19:19:12 +0800
-
