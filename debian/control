@@ -16,6 +16,8 @@ Build-Depends: debhelper-compat (= 13),
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libx11-dev,
+               libxcb-dpms0-dev,
+               libxcb-screensaver0-dev,
                qtbase5-private-dev
 Standards-Version: 4.6.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-powermanagement-packaging

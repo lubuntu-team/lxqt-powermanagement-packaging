@@ -4,6 +4,7 @@ lxqt-powermanagement (1.4.0-0ubuntu1) UNRELEASED; urgency=medium
   * Bump build dependencies.
   * Show a notification when the battery is present, not absent.
   * Wraaaaaaaaaaaaaaaaaaaaap.
+  * Add some missing build dependencies.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 13 Nov 2023 11:39:49 -0600
 
