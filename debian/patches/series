@@ -1,1 +1,2 @@
 battery-ux.patch
+revert-dpms-changes.patch

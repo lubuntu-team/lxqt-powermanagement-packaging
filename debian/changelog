@@ -1,3 +1,9 @@
+lxqt-powermanagement (1.4.0-0ubuntu2) noble; urgency=medium
+
+  * Patched out DPMS-related code (it was causing constant crashes)
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Tue, 14 Nov 2023 19:00:33 -0600
+
 lxqt-powermanagement (1.4.0-0ubuntu1) noble; urgency=medium
 
   * New upstream release.
