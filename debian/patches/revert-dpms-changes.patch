@@ -11,7 +11,7 @@ Last-Update: 2023-11-14
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 07f9549..6215d9c 100644
+index 876ecc3..9585409 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -15,22 +15,18 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -19,7 +19,7 @@ index 07f9549..6215d9c 100644
  option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
  
 -set(LXQTBT_MINIMUM_VERSION "0.13.0")
- set(KF5_MINIMUM_VERSION "5.101.0")
+ set(KF5_MINIMUM_VERSION "5.36.0")
  set(LXQT_MINIMUM_VERSION "1.4.0")
  set(QT_MINIMUM_VERSION "5.15.0")
  
@@ -51,7 +51,7 @@ index b29362a..177ddb1 100644
  
  install(TARGETS
 diff --git a/src/idlenesswatcher.cpp b/src/idlenesswatcher.cpp
-index ecaa641..cb9d9e1 100644
+index 615519e..5ff2ad1 100644
 --- a/src/idlenesswatcher.cpp
 +++ b/src/idlenesswatcher.cpp
 @@ -24,7 +24,7 @@
@@ -63,7 +63,7 @@ index ecaa641..cb9d9e1 100644
  #include <QTimer>
  #include <KIdleTime>
  #include <Solid/Device>
-@@ -35,9 +35,6 @@
+@@ -34,9 +34,6 @@
  #include <QDebug>
  #include <LXQt/lxqtnotification.h>
  #include <QObject>
@@ -73,7 +73,7 @@ index ecaa641..cb9d9e1 100644
  
  IdlenessWatcher::IdlenessWatcher(QObject* parent):
      Watcher(parent)
-@@ -71,43 +68,14 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
+@@ -70,43 +67,14 @@ IdlenessWatcher::IdlenessWatcher(QObject* parent):
  
      connect(&mPSettings, &LXQt::Settings::settingsChanged, this, &IdlenessWatcher::onSettingsChanged);
  
@@ -117,7 +117,7 @@ index ecaa641..cb9d9e1 100644
  void IdlenessWatcher::setup()
  {
      if(mPSettings.isIdlenessWatcherEnabled()) {
-@@ -141,13 +109,6 @@ void IdlenessWatcher::setup()
+@@ -140,13 +108,6 @@ void IdlenessWatcher::setup()
                  milliseconds = 1000;
              mIdleBacklightWatcher = KIdleTime::instance()->addIdleTimeout(milliseconds);
          }
