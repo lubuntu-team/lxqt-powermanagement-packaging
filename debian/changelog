@@ -1,8 +1,16 @@
-lxqt-powermanagement (1.4.0-0ubuntu1~ppa2) jammy; urgency=medium
+lxqt-powermanagement (1.4.0-0ubuntu2~ppa1) jammy; urgency=medium
 
   * Backport to Jammy.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 13 Nov 2023 11:49:56 -0600
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Tue, 14 Nov 2023 19:28:31 -0600
+
+lxqt-powermanagement (1.4.0-0ubuntu2) noble; urgency=medium
+
+  * Patched out DPMS-related code (it was causing constant crashes)
+  * Renamed the "Repository-Browser" field to "Repository-Browse" in upstream
+    metadata.
+
+ -- Aaron Rainbolt <arraybolt3@gmail.com>  Tue, 14 Nov 2023 19:00:33 -0600
 
 lxqt-powermanagement (1.4.0-0ubuntu1) noble; urgency=medium
 

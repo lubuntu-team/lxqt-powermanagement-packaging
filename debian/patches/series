@@ -1,2 +1,3 @@
 battery-ux.patch
 revert-kwindowsystem-port.patch
+revert-dpms-changes.patch
