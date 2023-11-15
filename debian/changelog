@@ -1,6 +1,8 @@
 lxqt-powermanagement (1.4.0-0ubuntu2) noble; urgency=medium
 
   * Patched out DPMS-related code (it was causing constant crashes)
+  * Renamed the "Repository-Browser" field to "Repository-Browse" in upstream
+    metadata.
 
  -- Aaron Rainbolt <arraybolt3@gmail.com>  Tue, 14 Nov 2023 19:00:33 -0600
 
