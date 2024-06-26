@@ -57,7 +57,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +    bool discharging;
      double chargeLevel;
  
--    for (const Solid::Battery *battery : qAsConst(mBatteries))
+-    for (const Solid::Battery *battery : std::as_const(mBatteries))
 -    {
 -        totalEnergyFull += battery->energyFull();
 -        totalEnergyNow += battery->energy();
@@ -80,7 +80,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +    bool batteries = false;
 +    discharging = true;
 +
-+    for (const Solid::Battery *battery : qAsConst(mBatteries))
++    for (const Solid::Battery *battery : std::as_const(mBatteries))
 +    {
 +        batteries = true;
 +

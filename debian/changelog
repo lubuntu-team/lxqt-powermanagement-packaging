@@ -4,6 +4,7 @@ lxqt-powermanagement (2.0.0-0ubuntu1) UNRELEASED; urgency=medium
   * Fix DPMS-related patch.
   * Update copyright file.
   * Adjusted build dependencies.
+  * Fix battery notification patch.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 26 Jun 2024 15:44:04 -0500
 
