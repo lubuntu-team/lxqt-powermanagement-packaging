@@ -5,6 +5,7 @@ lxqt-powermanagement (2.0.0-0ubuntu1) UNRELEASED; urgency=medium
   * Update copyright file.
   * Adjusted build dependencies.
   * Fix battery notification patch.
+  * Bump Standards-Version to 4.7.0, no changes necessary.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 26 Jun 2024 15:44:04 -0500
 
