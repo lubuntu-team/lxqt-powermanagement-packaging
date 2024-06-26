@@ -7,18 +7,17 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
 Section: x11
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
-               libkf5idletime-dev,
-               libkf5solid-dev,
-               libkf5windowsystem-dev,
-               liblxqt-globalkeys-ui1-dev (>= 1.4.0),
-               liblxqt-globalkeys1-dev (>= 1.4.0),
-               liblxqt1-dev (>= 1.4.0),
-               libqt5svg5-dev,
-               libqt5x11extras5-dev,
+               libkf6idletime-dev,
+               libkf6solid-dev,
+               libkf6windowsystem-dev,
+               liblxqt-globalkeys-ui2-dev (>= 2.0.0),
+               liblxqt-globalkeys2-dev (>= 2.0.0),
+               liblxqt2-dev (>= 2.0.0),
                libx11-dev,
                libxcb-dpms0-dev,
                libxcb-screensaver0-dev,
-               qtbase5-private-dev
+               qt6-base-private-dev,
+               qt6-svg-dev
 Standards-Version: 4.6.2
 Vcs-Browser: https://git.lubuntu.me/Lubuntu/lxqt-powermanagement-packaging
 Vcs-Git: https://git.lubuntu.me/Lubuntu/lxqt-powermanagement-packaging.git
@@ -40,7 +39,7 @@ Package: lxqt-powermanagement-l10n
 Architecture: all
 Multi-Arch: foreign
 Section: localization
-Depends: qttranslations5-l10n, ${misc:Depends}
+Depends: qt6-translations-l10n, ${misc:Depends}
 Description: Language package for lxqt-powermanagement
  The l10n files for lxqt-powermanagement
  .
