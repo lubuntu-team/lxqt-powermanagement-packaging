@@ -1,4 +1,4 @@
-lxqt-powermanagement (2.0.0-0ubuntu1~ppa1) oracular; urgency=medium
+lxqt-powermanagement (2.0.0-0ubuntu1) oracular; urgency=medium
 
   * New upstream release.
   * Fix DPMS-related patch.
@@ -7,7 +7,7 @@ lxqt-powermanagement (2.0.0-0ubuntu1~ppa1) oracular; urgency=medium
   * Fix battery notification patch.
   * Bump Standards-Version to 4.7.0, no changes necessary.
 
- -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Wed, 26 Jun 2024 15:44:04 -0500
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 15 Aug 2024 16:29:08 -0500
 
 lxqt-powermanagement (1.4.0-0ubuntu2) noble; urgency=medium
 
