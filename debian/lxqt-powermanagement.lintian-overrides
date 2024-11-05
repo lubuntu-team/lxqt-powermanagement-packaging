@@ -1,0 +1,4 @@
+# This is expected
+lxqt-powermanagement: desktop-entry-lacks-keywords-entry [usr/share/applications/lxqt-config-powermanagement.desktop]
+lxqt-powermanagement: desktop-entry-invalid-category LXQt [usr/share/applications/lxqt-config-powermanagement.desktop]
+lxqt-powermanagement: no-manual-page *
