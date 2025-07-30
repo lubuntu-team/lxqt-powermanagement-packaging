@@ -11,18 +11,18 @@ Last-Update: 2024-06-26
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 
---- lxqt-powermanagement-2.0.0.orig/CMakeLists.txt
-+++ lxqt-powermanagement-2.0.0/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
 @@ -29,7 +29,6 @@ find_package(KF6IdleTime ${KF6_MINIMUM_V
  find_package(KF6Solid ${KF6_MINIMUM_VERSION} REQUIRED)
  find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
  find_package(lxqt-globalkeys-ui ${LXQT_GLOBALKEYS_MINIMUM_VERSION} REQUIRED)
--find_package(XCB REQUIRED COMPONENTS xcb-dpms xcb-screensaver)
+-find_package(XCB REQUIRED COMPONENTS DPMS SCREENSAVER)
  
  message(STATUS "Building with Qt${Qt6Core_VERSION}")
  
---- lxqt-powermanagement-2.0.0.orig/src/idlenesswatcher.cpp
-+++ lxqt-powermanagement-2.0.0/src/idlenesswatcher.cpp
+--- a/src/idlenesswatcher.cpp
++++ b/src/idlenesswatcher.cpp
 @@ -35,8 +35,6 @@
  #include <QDebug>
  #include <LXQt/lxqtnotification.h>
@@ -94,8 +94,8 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
      }
  }
  
---- lxqt-powermanagement-2.0.0.orig/src/idlenesswatcher.h
-+++ lxqt-powermanagement-2.0.0/src/idlenesswatcher.h
+--- a/src/idlenesswatcher.h
++++ b/src/idlenesswatcher.h
 @@ -45,8 +45,6 @@ private Q_SLOTS:
      void onSettingsChanged();
  
