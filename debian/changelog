@@ -1,3 +1,9 @@
+lxqt-powermanagement (2.3.0-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+
+ -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 19 Feb 2026 17:19:39 -0500
+
 lxqt-powermanagement (2.2.1-0ubuntu1) questing; urgency=medium
 
   * New upstream release.
