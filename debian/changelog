@@ -4,6 +4,7 @@ lxqt-powermanagement (2.3.0-0ubuntu1) resolute; urgency=medium
    - Update build dependencies.
   * Update copyright file.
   * Update Standards-Version to 4.7.3, no changes needed.
+  * Remove unnecessary Rules-Requires-Root.
 
  -- Aaron Rainbolt <arraybolt3@ubuntu.com>  Thu, 19 Feb 2026 17:19:39 -0500
 
